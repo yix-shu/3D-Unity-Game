@@ -17,11 +17,11 @@ public class PlayerMovement : MonoBehaviour
         rb.AddForce(0, 0, forwardForce * Time.deltaTime); //constant forward movement
         if (Input.GetKey("d"))
         {
-            rb.AddForce(500 * Time.deltaTime, 0, 0);
+            rb.AddForce(500 * Time.deltaTime, 0, 0, ForceMode.VelocityChange); //ForceMode will allow us to specific which way to add a force
         }
         if (Input.GetKey("a"))
         {
-            rb.AddForce(-500 * Time.deltaTime, 0, 0);
+            rb.AddForce(-500 * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
     }
 }
